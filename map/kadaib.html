@@ -50,7 +50,7 @@ function checkCookie() {
   var user=getCookie("username");
   console.log(user);
   if (user != "" ) {
-    alert("また見てくれてありがとう！" + user);
+    alert("今日は" + user+"さん");
   } else {
      user = prompt("名前を教えてください:","");
      if (user != "" && user != null) {
@@ -68,7 +68,7 @@ function delCookie()
     function initMap() {
       var myOptions = {
         zoom: 8,
-        center: {lat: 35.72187, lng: 139.464989},
+        center: {lat: 35.7024991, lng: 138.6645978},
         mapTypeId: google.maps.MapTypeId.TERRAIN,
         disableDefaultUI: true,
         // Step 4. Customize displayed controls
@@ -83,14 +83,14 @@ function delCookie()
       var iconBase = 'https://maps.google.com/mapfiles/kml/shapes/';
 
       var marker = new google.maps.Marker({
-        position: {lat: 35.72187, lng: 139.464989},
+        position: {lat: 35.7024991, lng: 138.6645978},
         icon: iconBase + 'flag_maps.png',
         map: map
       });
 
       // Step 3. Add info window
 
-      var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">Custom info window</h2><p>This is a cool custom info window.</p></div>';
+      var contentString = '<div id="content"><h2 id="firstHeading" class="firstHeading">InfoWindow</h2><p>夜景がとても綺麗で、温泉もあって癒せれます🎶</p></div>';
 
       var infowindow = new google.maps.InfoWindow({
         content: contentString
